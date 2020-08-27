@@ -3,6 +3,12 @@
 
 -- Common Locations
 package.path = package.path..";/apis/?;/apis/?.lua"
+if fs.exists(".global-require-path") then
+    local h = fs.open(".global-require-path","r")
+    local contents = h.readAll()
+    package.path = package.path..";"..contents
+    h.close()
+end
 --Load Soqet
 local soqet = require("soqet")
 --List Opened Channels
