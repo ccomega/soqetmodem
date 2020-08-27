@@ -1,7 +1,6 @@
 --Modems but Soqet
 -- (requires soqet for CC)
 
---fs.combine(shell.getRunningProgram(), "..")
 -- Common Locations
 package.path = package.path..";/apis/?;/apis/?.lua"
 --Load Soqet
