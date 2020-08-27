@@ -61,7 +61,7 @@ local peripheralObject = {
     end
 }
 --Opens daemon (event handler)
-shell.openTab(fs.combine(fs.combine(shell.getRunningProgram(), ".."), "daemon.lua"))
+shell.openTab(fs.combine(fs.getDir(shell.getRunningProgram()), "daemon.lua"))
 --Creates copy of peripheral API
 local oldperipheral = {}
 for k,v in pairs(peripheral) do
