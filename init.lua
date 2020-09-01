@@ -89,6 +89,20 @@ function _G.peripheral.find(p)
         return oldperipheral.find(p)
     end
 end
+--Makes getNames return "soqet" and other peripherals.
+function _G.peripheral.getNames()
+    --Save the peripheral list
+    local pers = oldperipheral.getNames()
+    for k,v in pairs(pers) do
+        --Get the last index.
+        local lastIndex = k
+    end
+    --Adds Soqet to peripheral list
+    pers[lastIndex+1] = "soqet"
+    --aaaand ofcourse return it!
+    return pers
+end
+    
 
 --And thats about it!
 
